@@ -136,6 +136,7 @@ resource "aws_msk_cluster" "default" {
   kafka_version          = var.kafka_version
   number_of_broker_nodes = var.broker_per_zone * length(var.subnet_ids)
   enhanced_monitoring    = var.enhanced_monitoring
+  storage_mode           = var.msk_storage_mode
 
   broker_node_group_info {
     instance_type   = var.broker_instance_type

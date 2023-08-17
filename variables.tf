@@ -247,3 +247,10 @@ variable "public_access_enabled" {
   description = "Enable public access to MSK cluster (given that all of the requirements are met)"
   nullable    = false
 }
+
+variable "msk_storage_mode" {
+  type        = string
+  default     = "LOCAL"
+  description = "Controls storage mode for supported storage tiers. Valid values are: LOCAL or TIERED."
+  nullable    = false
+}
